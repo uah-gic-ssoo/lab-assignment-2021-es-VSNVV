@@ -13,17 +13,18 @@ pthread_mutex_t mutex;
 /* Thread function */
 void * thread_function(void * data) {
 
-    /* The input variable contains the number of points that the thread must
+   /* The input variable contains the number of points that the thread must
      * calculate */
-    int points = *((int *)data);    
-
+    int points = *((int *)data);
+    /* The local variable that shall be used to store the number of points within
+     * the circular section */
+    int count = 0;     
     /* TODO: Implement the loop that obtains the random points and counts how
      * many of those lay within the circumference of radius 1 */
-
     /* TODO: Add the count to the global variable hits in mutual exclusion */
-    hits = hits + points;
-
+    hits = hits + count;
     return NULL;
+
 
 }
 
