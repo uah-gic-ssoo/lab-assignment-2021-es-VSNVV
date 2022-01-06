@@ -32,11 +32,7 @@ void * thread_function(void * data) {
     hits = hits + count;
     pthread_mutex_unlock(&mutex)
     return NULL;
-
-
 }
-
-
 void compute(int npoints, int nthreads) {
     /* TODO: Erase the following line: */
     printf("compute(%d, %d)\n", npoints, nthreads);
